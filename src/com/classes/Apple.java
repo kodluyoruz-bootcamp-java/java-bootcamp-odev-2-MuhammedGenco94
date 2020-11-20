@@ -14,12 +14,12 @@ public class Apple extends Phone implements VideoCall, ScreenShare {
 
     @Override
     public void shareYourScreen() {
-        System.out.println("Screen sharing...");
+        System.out.println("* Screen sharing...");
     }
 
     @Override
     public void makeVideoCall() {
-        System.out.println("Making video call...");
+        System.out.println("* Making video call...");
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Apple extends Phone implements VideoCall, ScreenShare {
                     "Brand Name: " + this.getName() + "\n" +
                     "IMEI Number: " + this.getIMEINumber() + "\n" +
                     "Version Number: " + this.getVersionNumber() + "\n" +
-                    "RAM Capacity: " + this.getRamCapacity() + " MB\n" +
+                    "RAM Capacity: " + (int) this.getRamCapacity() + " MB\n" +
                     "Screen Size: " + this.getScreenSize() + " Inch\n";
         }
         return "Apple Phone name has not been assigned !!";

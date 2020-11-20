@@ -25,12 +25,12 @@ public abstract class Phone implements PhoneBehaviour {
 
     @Override
     public void makeCall() {
-        System.out.println("Call has been made.");
+        System.out.println("* Call has been made.");
     }
 
     @Override
     public void sendSMS() {
-        System.out.println("SMS has been send.");
+        System.out.println("* SMS has been send.");
     }
 
     public String getName() {

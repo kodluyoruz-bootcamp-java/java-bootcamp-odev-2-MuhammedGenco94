@@ -20,7 +20,7 @@ public class Samsung extends Phone implements FileShare, MP3Play {
                     "Brand Name: " + this.getName() + "\n" +
                     "IMEI Number: " + this.getIMEINumber() + "\n" +
                     "Version Number: " + this.getVersionNumber() + "\n" +
-                    "RAM Capacity: " + this.getRamCapacity() + " MB\n" +
+                    "RAM Capacity: " + (int) this.getRamCapacity() + " MB\n" +
                     "Screen Size: " + this.getScreenSize() + " Inch\n";
         }
         return "Samsung Phone name has not been assigned !!";
@@ -32,13 +32,13 @@ public class Samsung extends Phone implements FileShare, MP3Play {
     public void sendOverBluetooth() {
         if (!bluetoothIsOpen) {
             bluetoothIsOpen = true;
-            System.out.println("Bluetooth has been opened !");
+            System.out.println("* Bluetooth has been opened !");
         }
-        System.out.println("Sharing files...");
+        System.out.println("* Sharing files...");
     }
 
     @Override
     public void listenMusic() {
-        System.out.println("Opening MP3 to play music");
+        System.out.println("* Opening MP3 to play music");
     }
 }
