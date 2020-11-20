@@ -1,16 +1,17 @@
 package com.classes;
 
 import com.interfaces.Keyboard;
+import com.interfaces.PhoneBehaviour;
 
 public abstract class Phone implements PhoneBehaviour {
     private String name;
     private String IMEINumber;
     private String versionNumber;
-    private int ramCapacity;
-    private int screenSize;
+    private double ramCapacity;
+    private double screenSize;
     private Keyboard keyboard;
 
-    public Phone(String name, String IMEINumber, String versionNumber, int ramCapacity, int screenSize, Keyboard keyboard) {
+    public Phone(String name, String IMEINumber, String versionNumber, double ramCapacity, double screenSize, Keyboard keyboard) {
         this.name = name;
         this.IMEINumber = IMEINumber;
         this.versionNumber = versionNumber;
@@ -23,13 +24,13 @@ public abstract class Phone implements PhoneBehaviour {
     }
 
     @Override
-    public String makeCall() {
-        return "Call has been made.";
+    public void makeCall() {
+        System.out.println("Call has been made.");
     }
 
     @Override
-    public String sendSMS() {
-        return "SMS has been send.";
+    public void sendSMS() {
+        System.out.println("SMS has been send.");
     }
 
     public String getName() {
@@ -56,7 +57,7 @@ public abstract class Phone implements PhoneBehaviour {
         this.versionNumber = versionNumber;
     }
 
-    public int getRamCapacity() {
+    public double getRamCapacity() {
         return ramCapacity;
     }
 
@@ -64,7 +65,7 @@ public abstract class Phone implements PhoneBehaviour {
         this.ramCapacity = ramCapacity;
     }
 
-    public int getScreenSize() {
+    public double getScreenSize() {
         return screenSize;
     }
 

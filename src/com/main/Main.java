@@ -9,7 +9,7 @@ import com.interfaces.Keyboard;
 public class Main {
     public static void main(String[] args) {
 
-        Apple apple = new Apple("Iphone-X", "123N", "3.1.0.1", 6000, 13, new TouchKeyboard());
+        Apple apple = new Apple("Iphone-X", "123N", "3.1.0.1", 6000, 12.5, new TouchKeyboard());
         System.out.println(apple.getSpecifications());
         apple.makeCall();
         apple.sendSMS();
@@ -17,9 +17,9 @@ public class Main {
         apple.shareYourScreen();
         apple.getKeyboard().press();
 
-        System.out.println("\n");
+        System.out.println();
 
-        Samsung samsung = new Samsung("Samsung S9 Plus", "1234ert", "3.6", 8, 8, new PhysicalKeyboard());
+        Samsung samsung = new Samsung("Samsung S9 Plus", "1234ert", "3.6", 8, 8.5, new PhysicalKeyboard());
         System.out.println(samsung.getSpecifications());
         apple.makeCall();
         apple.sendSMS();

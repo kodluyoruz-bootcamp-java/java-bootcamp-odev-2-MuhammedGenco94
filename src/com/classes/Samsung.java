@@ -9,14 +9,15 @@ public class Samsung extends Phone implements FileShare, MP3Play {
     public Samsung() {
     }
 
-    public Samsung(String name, String IMEINumber, String versionNumber, int ramCapacity, int screenSize, Keyboard keyboard) {
+    public Samsung(String name, String IMEINumber, String versionNumber, double ramCapacity, double screenSize, Keyboard keyboard) {
         super(name, IMEINumber, versionNumber, ramCapacity, screenSize, keyboard);
     }
 
     @Override
     public String getSpecifications() {
         if (!(this.getName() == null)) {
-            return "Brand Name: " + this.getName() + "\n" +
+            return "***************************************\n" +
+                    "Brand Name: " + this.getName() + "\n" +
                     "IMEI Number: " + this.getIMEINumber() + "\n" +
                     "Version Number: " + this.getVersionNumber() + "\n" +
                     "RAM Capacity: " + this.getRamCapacity() + " MB\n" +
